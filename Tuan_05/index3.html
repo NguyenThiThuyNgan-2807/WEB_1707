@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>3. Nâng cấp Hello (web):</h1>
+    <input type="text" id="name" placeholder="Your Name">
+    <button onclick="btnCheck()">Enter</button>
+    <p id="result"></p>
+    <script>
+        function btnCheck() {
+            var name = document.getElementById("name").value;
+            var result = document.getElementById("result").innerText = "Hello " + name;
+        }
+        if (name === "") {
+            result.innerText = "Bạn chưa nhập.";
+        } else if (!isNaN(input)) {
+            result.innerText = "Bạn vừa nhập số.";
+        } else {
+            result.innerText = "Bạn vừa nhập text.";
+        }
+    </script>
+</body>
+
+</html>

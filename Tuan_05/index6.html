@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+        }
+        
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nâng cao - 1. Check số:</h1>
+    <input type="text" id="so" placeholder="Nhập số">
+    <button onclick="btnCheck()">Enter</button>
+    <p id="result"></p>
+    <script>
+        function btnCheck() {
+            var so = document.getElementById("so").value.trim();
+            var result = document.getElementById("result");
+            if (so === "") {
+                result.innerText = "Please input.";
+                result.className = "error";
+            } else if (isNaN(so)) {
+                result.innerText = "Không phải số.";
+                result.className = "error";
+            } else {
+                result.innerText = "Số hợp lệ: " + so;
+                result.className = "success";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+        }
+        
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Nâng cao - 2. Check phone: </h1>
+    <input type="text" id="sdt" placeholder="Nhập SĐT">
+    <button onclick="btnCheck()">Enter</button>
+    <p id="result"></p>
+    <script>
+        function btnCheck() {
+            var sdt = document.getElementById("sdt").value.trim();
+            var result = document.getElementById("result");
+            if (sdt === "") {
+                result.innerText = "Please input.";
+                result.className = "error";
+            } else if (!/^\d{10}$/.test(sdt)) {
+                result.innerText = "Không phải SĐT.";
+                reslut.className = "error";
+            } else {
+                result.innerText = "SĐT hợp lệ: " + sdt;
+                result.className = "success";
+            }
+        }
+    </script>
+</body>
+
+</html>
